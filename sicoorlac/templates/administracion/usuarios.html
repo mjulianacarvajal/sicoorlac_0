@@ -1,0 +1,109 @@
+
+{% extends 'partials/body.html' %}
+{% block contenido %}
+
+
+
+    <h3>Asociados</h3>
+	<table class="jumbotron-fluid">
+  <thead class="table-hover">
+    <tr>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Documento</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Correo Electrónico</th>
+      <th scope="col">Dirrección</th>
+	  <th scope="col">Tipo</th>
+	  <th scope="col">Observaciones</th>
+      <th scope="colgroup">Acción</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for usuario in usuarios %}
+    <tr>
+
+     {% if usuario.u_tipo == 'Asociado' %}
+
+      <td >{{usuario.nombre}}</td>
+      <td>{{usuario.apellido}}</td>
+      <td>{{usuario.documento}}</td>
+      <td>{{usuario.telefono}}</td>
+      <td>{{usuario.email}}</td>
+      <td>{{usuario.direccion}}</td>
+	  <td>{{usuario.u_tipo}}</td>
+	  <td>{{usuario.u_observaciones}}</td>
+
+      <td>
+          <button class="btn btn-primary" >
+
+          <i class="fas fa-edit"></i></button>
+
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="eliminar_usuario(this)" value="{{usuario.id}}">
+            <i class="fas fa-trash-alt"></i></button>
+      </td>
+      {% endif %}
+
+
+
+
+    </tr>
+    {% endfor %}
+
+
+
+  </tbody>
+</table>
+    <!-- Button trigger modal -->
+
+
+<!-- Modal Borrar-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Asociados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Seguro que desea eliminar este registro?
+                    <form method="get" action="" id="form_eliminar"> {% csrf_token %} </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" onclick=" ejecutar_eliminarf()">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Editar-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Asociados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Seguro que desea eliminar este registro?
+                    <form method="get" action="" id="form_editar"> {% csrf_token %} </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" onclick=" ejecutar_editarf()">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock contenido %}
+

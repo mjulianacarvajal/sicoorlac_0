@@ -1,0 +1,143 @@
+{% load static %}
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+   <!-- Brand Logo -->
+  <a href="index3.html" class="brand-link">
+    <img src="{% static 'img/SircorlacLogo.png' %}" alt="#" class="brand-image img-circle elevation-3"
+      style="opacity: .8">
+       <span class="brand-text font-weight-light">Sicoorlac</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        Nombre Usuario Activo
+        <Strong>{{usuario_actual.first_name}} </Strong>
+        </div>
+
+    <!-- SidebarSearch Form -->
+
+
+    <!-- Sidebar Menu -->
+  <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+
+          <li class="nav-header">Gestión</li>
+          <li class="nav-item">
+              <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-user-circle"></i>
+                   <i class="fas fa-angle-left right"></i>
+                    <p> Usuarios</p>
+              </a>
+
+              <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                      <a href="{% url 'usuarios' %}"  class="nav-link">   {# query serian los == AS#}
+                          <i class="nav-icon fas fa-users"></i>
+                          <p>Asociados Existentes</p>
+                      </a>
+                     </li>
+                  <li class="nav-item">
+                      <a href="{% url 'usuarios-crear' %}" class="nav-link">
+                          <i class="nav-icon fas fa-user-plus"></i>
+                          <p>Crear Usuario</p>
+                      </a>
+                  </li>
+
+
+                  <li class="nav-item">
+                      <a href="{% url 'bovinos-crear' %}" class="nav-link">
+                          <i class="fa-solid fa-cow"></i>   {# revisar boostrap#}
+                          <p>Crear Bovinos</p>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          <i class="fa-solid fa-cow"></i>   {# revisar boostrap#}
+                          <p>Eliminar Bovinos</p>
+                      </a>
+                  </li>
+
+                </ul>
+
+
+
+ {% comment %}
+              <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                      <a href="{% url 'bovinos' %}"  class="nav-link">
+                          <i class="fa-solid fa-cow"></i>
+                          <p>Bovinos Registrados</p>
+                      </a>
+                     </li>
+
+{#                  LInea#}
+
+              <li class="nav-item">
+                <a href="" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Flot</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inline</p>
+                </a>
+              </li>
+            </ul>{% endcomment %}
+          </li>
+
+         <!-- GRAFICOS Y REPORTES, PENDIENTE -->
+
+                  <li class="nav nav-treeview">
+                      <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          {#                      <a href="{% url 'usuarios-eliminar' %}" class="nav-link">#}
+                          <p>Entregas Recolectadas</p>
+                      </a>
+                  </li>
+
+
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-edit"></i>
+                          <p>
+                              Indicadores
+                              <i class="fas fa-angle-left right"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="" class="nav-link">
+                                  <i class="far fa-circle"></i>
+                                  <p>Entregas por asociado </p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="../forms/advanced.html" class="nav-link">
+                                  <i class="far fa-circle "></i>
+                                  <p>Entregas por jornada</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="../forms/editors.html" class="nav-link">
+                                  <i class="far fa-circle "></i>
+                                  <p>Total entregado</p>
+                              </a>
+                          </li>
+                      </ul>
+              </li>
+    </nav>
+  </div>
+    <!-- /.sidebar -->
+</aside>  
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+  <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->

@@ -1,0 +1,66 @@
+{% extends 'partials/body.html' %}
+{% block contenido %}
+
+<table class="table">    #ajustar formulario addd estetica
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Régistro ICA</th>
+      <th scope="col">Vacuna Aftosa</th>
+      <th scope="col">Vacuna Brucelosis</th>
+      <th scope="col">Estado</th>
+         
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for bovino in bovinos %}
+    <tr>
+
+      
+      <td class="align middle text-center"><img class="rounded-circle" alt="" width="50" height="50"></td>
+      <td >{{bovino.b_nombre}}</td>
+      <td>{{bovino.b_regICA}}</td>
+      <td>{{bovino.b_aftosa}}</td>
+	  <td>{{bovino.b_brucelosis}}</td>
+	   <td>{{bovino.estado}}</td>
+
+	<div class="row">
+        <form action="" method="POST" class="col-4">
+            {% csrf_token %}
+            <input type="hidden" name="pk" value="{{usuario.documento}}">
+                                        <button class="btn btn-primary btn-block" name="form-editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </form>
+                                    <form action="" method="POST" class="col-4">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="pk" value="{{empresa.id}}">
+                                        <button class="btn btn-danger btn-block" name="form-eliminar">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+
+                                </div>
+   
+   
+   
+   
+      
+      <td><a class="btn btn-primary" href="{% url 'bovinos-editar' bovino.id  %}"><i class="fas fa-edit"></i></a>
+        <a class="btn btn-danger" href="{% url 'bovinos-eliminar' bovino.id  %}"><i class="fas fa-trash-alt"></i></a>
+      </td>
+      }
+
+
+
+
+    </tr>
+    {% endfor %}
+
+
+
+  </tbody>
+</table>
+{% endblock contenido %}

@@ -1,0 +1,128 @@
+{% extends 'partials/body.html' %}
+{% block contenido %}
+
+
+
+    <h1>Recepción Asociados</h1>
+
+    <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-5">
+                    <!-- general form elements -->
+                    <div class="card card-warning">
+                        <div class="card-header">
+                            <h3 class="card-title">Recepción</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group" id="form2">  #
+                                    <!-- form2 -->
+                                    <form>
+                                        <p class="text-bold"> 1. Apreciado recepcionista: Reciba cada entrega según orden de llegada.</p>
+                                        <div class="col-md-12">
+                                            <div class="card-header">
+                                                <p class="text-primary">1.1-Seleccione el <b> Asociado </b> y verifique la información antes de ingresarla.</p>
+                                                <div class="card-body">
+                                                    <ul class="pagination pagination-month justify-content-center">
+                                                        <!--                   arreglar CCS fila asoiados-->
+                                                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+                                                                <p class="page-month">Aso</p>
+                                                                <p class="page-year">Turno</p>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="#">
+                                                                <p class="page-month">Aso</p>
+                                                                <p class="page-year">Turno</p>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+                                                                <p class="page-month">Aso</p>
+                                                                <p class="page-year">Turno</p>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+                                                                <p class="page-month">Aso</p>
+                                                                <p class="page-year">Turno</p>
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+                                                                <p class="page-month">Aso</p>
+                                                                <p class="page-year">Turno</p>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+                                                                <p class="page-month">Aso</p>
+                                                                <p class="page-year">Turno</p>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+                                                                <p class="page-month">Aso</p>
+                                                                <p class="page-year">Turno</p>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+                                                                <p class="page-month">Aso</p>
+                                                                <p class="page-year">Turno</p>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="text-center">Hora <b><span id="tiempo">00 : 00 : 00</span> </b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </label>
+
+                                        <div class="text-bold">2. Seleccione la entrega recibida. </div>
+                                        <!-- /.card-body -->
+                                        <div class="card-body">
+                                            <button type="submit" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                                Entrega </button>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-item">1-<a href="#">Entrega Uno</a></li>
+                                                <hr />
+                                                <li class="dropdown-item">2-<a href="#">Entrega Dos</a></li>
+                                            </ul>
+                                        </div>    <!--   como inputar en BD 1 o 2-->
+                                        <div class="card-body">
+                                            <p class="text-blue"> 2.1 -Digite la entrega recibida por la<b> Cooperativa </b> y el costo por <b>Litro Ingresado. </b>
+                                            <div class="input-group-prepend">
+                                                <label for="entrega">Litros</label>
+                                                <div class="col-sm-4">
+                                                    <input type="number" class="form-control" id="entrega" placeholder="Litros Entregados" class="form-control"> </br> </span>
+                                                </div>
+                                                </br>
+                                                <!--  rangos para   type="range" min="o" max="10"-->
+                                            </div>
+                                            <div class="input-group-prepend">
+                                                <label for="entrega">Precio</label>
+                                                <div class="col-sm-4">
+                                                    <input type="number" class="form-control" id="precio" placeholder="Pago del litro">
+                                                    <span>Valor sujeto a cambios.</span>
+                                                    </input>
+                                                </div>
+                                            </div>
+                                    </form>
+
+                                </div>
+{% endblock contenido %}

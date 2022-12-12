@@ -1,0 +1,80 @@
+
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %} 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'css/adminlte.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+  
+  <title>Sicorlac| Logueo</title>
+</head>
+
+<style>
+input, select{
+    width: 95%;
+    text-align:justify-all;
+    align-content: flex-start;
+}
+</style>
+
+<body class="hold-transition login-page">
+   <div class="header">Nombre Cliente <img src="" alt="Logotipo" width="160" height="80" id="Insert_logo" style="background: #828380; display:block;"/>  </div>  <!--  logo pendiente cooperativa  -->
+    <div class="login-box">
+  <div class="login-logo">
+    <a href="#"><b>Sicoor</b>LAC</a>    {# pagina web coopetiva #}
+    </div>
+  <!-- /.login-logo -->
+    <div class="card">
+        <p class="login-box-msg">Ingrese sus datos</p>
+        <form method="post">  <!--  CONEXION     -->
+            <div class="input-group mb-lg-auto">
+                {% csrf_token %}
+                    <span class="fas fa-envelope"></br> Correo</span>
+                {{form.username}}
+                    <div class="input-group mb-sm-3">
+                              </div>
+                 <span class="fas fa-lock"></br> Constraseña</span>
+                {{form.password}}
+                     <div class="input-group mb-sm-3">
+                </div>
+            </div>
+
+            <!-- /.col -->
+            <div class="col-sm-12 text-center">
+                <input type="submit" class="btn btn-success btn-block" value="Ingresar">
+            </div>
+            <!-- /.col -->
+            <div class="col-md-12 text-center">
+                <a href="forgot-password.html" >Solicitar contraseña nueva</a>
+            </div>
+        </form>
+        <!-- /.login-card-body -->
+	</div>	
+ <!-- /.login-box -->
+</div>
+
+   <section>
+
+
+
+   </section>
+
+
+
+  {% include 'partials/js.html' %}
+ </body>
+ </html>
+

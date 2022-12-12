@@ -1,0 +1,23 @@
+{% extends 'partials/body.html' %}
+{% load crispy_forms_tags %}
+
+  {% block contenido %}
+       {% csrf_token %}
+    <form action="POST" >
+
+           {{ formBovino }}
+
+    <input type="submit" value="Registrar" class="btn btn-outline-success "> Registrar </div>
+
+    </form>
+  {% endblock contenido %}
+
+
+
+
+{% comment %} <form
+        action="{% url 'create_task' %}"   crear_usuario
+        method="POST"
+        class="card card-body mb-2"
+      >{% endcomment %}
+  

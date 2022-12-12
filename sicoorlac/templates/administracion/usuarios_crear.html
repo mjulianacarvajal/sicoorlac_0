@@ -1,0 +1,30 @@
+{% extends 'partials/body.html' %}
+{% load crispy_forms_tags %}
+
+
+ {% block contenido %}
+     <div class="row">
+         <h5> Ingresar Usuarios</h5>
+         <div class="table table-borderless">
+             <div class="content">
+                 <!-- ADD Usuarios!!! -->
+                 <div class="card-header">
+                     <div class="col-sm-8"></div>
+
+
+                     <form action="/adm/usuario_insertarBD/" method="post">
+                         {% csrf_token %}
+                         {{ form }}
+                         <br>
+                         <div>
+                             <button type="submit" value="Registrar" class="btn btn-success "> Registrar
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
+         <!-- /.card-body -->
+     </div>
+
+
+ {% endblock contenido %}

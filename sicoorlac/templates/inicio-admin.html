@@ -1,0 +1,160 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+
+{% block contenido %}
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+             <!-- hora actual -->
+              <div class="text-md-right">Hora <b><span id="tiempo">00 : 00 : 00</span> </b>
+                  </div>
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+                <!-- diarios -->
+              <div class="small-box bg-info">
+                <div class="inner">
+                     <label> Entrega Mañana </label>
+                  <h3>300</h3>     <!-- diarios entrega 1  -->
+                    <p>Asociados </p>
+                </div>
+                <div class="icon">
+                  <i class="far fa-thumbs-up"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+
+              <div class="small-box bg-info">
+                <div class="inner">
+                     <label> Entrega Tarde</label>
+                  <h3>600</h3>  <!-- diarios entrega 1  -->
+                    <p>Asociados</p>
+                </div>
+                <div class="icon">
+                  <i class="far fa-thumbs-up"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                  <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                     <label>Cumplimiento Asociados </label>
+                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+                    <p>Porcentaje de Entregas</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+                  <div class="small-box bg-success">
+                <div class="inner">
+                     <label> Entrega Manaña</label>
+                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+                    <p>Porcentaje de Entregas</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+
+            </div>
+
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                     <label>Recolección Mañana</label>
+                  <h3>44</h3>
+                    <p>Producción Consolidada</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+                 <div class="small-box bg-warning">
+                <div class="inner">
+                     <label>Recolección Tarde</label>
+                  <h3>44</h3>
+                    <p>Producción Consolidada</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                     <label>Producción Mañana</label>
+                  <h3>65</h3>
+                    <p>Producción Consolidada</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-cash-register"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+                <div class="small-box bg-danger">
+                <div class="inner">
+                     <label>Recolección Tarde</label>
+                  <h3>65</h3>
+                    <p>Producción Consolidada</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-cash-register"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+
+
+            </div>
+            <!-- ./col -->
+          </div>
+          <!-- /.row -->
+          <!-- Main row -->
+          <div class="row">
+            <!-- Left col -->
+            <section class="col-md-7 connectedSortable">
+                              <!-- /.card-body -->
+                <div class="card-footer text-mb-center">
+                Recordar fijar el precio de la leche o producción concertado para cada dia <br>
+                </div>
+                <!-- /.card-footer-->
+
+                <div class="col-mb">
+                    <section class="content">
+                        <div class="container-fluid">
+                            <div class="card card-primary card-outline">
+                                <div class="card-header">
+                                    <h3 class="card-title">Compilación Diaria</h3>
+                                </div> <!-- /.card-body -->
+                                <div class="card-body">
+                                    <label> Total </label>
+                                    <div class="Text-end">
+                                        <a>Litros consolidados.</a><br>   {# FUNCION SUMATORIA ASOCIADOS#}
+                                        <a>Precio. </a><br> {# FUNCION TRAER PRECIO#}
+                                        <a>Producción actual:</a><br>   {# MULTIPLICAR PRECIO Y LITROS#}
+                                        <hr/>
+                                        <strong>Subtotal</strong>
+                                    </div>
+                                </div><!-- /.card-body -->
+                            </div>
+                        </div><!-- /.container-fluid -->
+                    </section>
+                    </div>
+               </section>
+      <!-- /.content -->
+{% endblock contenido %}
+    
